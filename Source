@@ -35,3 +35,30 @@ if(x % 2 == 0):
   print("Num is even.")
 else:
   print("Num is odd.")
+
+#-PROBLEM 4-
+#The most straightforward solution, though likely not the most optimal.
+
+import random as r
+from math import sqrt; from itertools import count, islice
+
+def is_prime(n):
+    return n > 1 and all(n%i for i in islice(count(2), int(sqrt(n)-1)))
+
+x = r.randint(2, 101)
+print(is_prime(x))
+
+#-PROBLEM 5-
+x = input("Enter a string: ")
+print(list(x),"\n")
+print(x[0:(int(len(x) / 2))])
+print(x[int(len(x) / 2): len(x)])
+
+def repeat_num_times(string_to_expand, length):
+    return (string_to_expand * (int(length/len(string_to_expand))+1))[:length]
+
+print("\n",repeat_num_times(x, 100))
+
+y = input("\nEnter another string: ")
+
+print(x + y)
