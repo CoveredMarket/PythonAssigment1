@@ -48,7 +48,7 @@ def is_prime(n):
 x = r.randint(2, 101)
 print(is_prime(x))
 
-#-PROBLEM 5-
+#-PROBLEM 6-
 x = input("Enter a string: ")
 print(list(x),"\n")
 print(x[0:(int(len(x) / 2))])
@@ -62,3 +62,74 @@ print("\n",repeat_num_times(x, 100))
 y = input("\nEnter another string: ")
 
 print(x + y)
+
+#-PROBLEM 7-
+l = []
+
+for x in range(1, 11):
+  l.append(x)
+
+print(l)
+print(l[0: int(len(l) / 2)])
+print(l[int(len(l) / 2): len(l)])
+
+def repeat_num_times(list_to_expand, length):
+    return (list_to_expand * (int(length/len(list_to_expand))+1))[:length]
+
+print(repeat_num_times(l, 50))
+
+l2 = []
+
+for x in range(11, 21):
+  l2.append(x)
+
+print(l + l2)
+
+#-PROBLEM 8-
+l = (1,2,3,4,5,6,7,8,9,10)
+
+print(l)
+print(l[0: int(len(l) / 2)])
+print(l[int(len(l) / 2): len(l)])
+
+def repeat_num_times(list_to_expand, length):
+    return (list_to_expand * (int(length/len(list_to_expand))+1))[:length]
+
+print(repeat_num_times(l, 50))
+
+l2 = (11,12,13,14,15,16,17,18,19,20)
+
+print(l + l2)
+
+#-PROBLEM 9-
+print("Given 5+3j and 4-7j as type complex:\n")
+print("Addition:",(5+3j)+(4-7j))
+print("Subtraction:",(5+3j)-(4-7j))
+print("Multiplication:",(5+3j)*(4-7j))
+print("Division:",(5+3j)/(5-7j))
+
+#-PROBLEM 10-
+x = int(input("Enter First Num: "))
+y = int(input("Enter Seond Num: "))
+z = x
+z += y
+print("\nAddition:", z)
+z = x
+z-= y
+print("Subtraction:", z)
+z = x
+z *= y
+print("Multipication:", z)
+z = x
+z /= y
+print("Division:", z)
+z = x
+z %= y
+print("Modulus:", z)
+z = x
+z**=y
+print("Exponentiation:", z)
+z = x
+z//= y
+print("Floor Division", z)
+
