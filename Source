@@ -133,3 +133,39 @@ z = x
 z//= y
 print("Floor Division", z)
 
+#-PROBLEM 11-
+a = int(input("Enter first binary num: "))
+b = int(input("Enter second binary num: "))
+
+print("Logical AND:", a & b)
+print("Logical OR:", a | b)
+print("Logical XOR", a ^ b)
+print("Logical ONE'S COMPLIMENT on a:", ~a)
+print("Logical ONE'S COMPLIMENT on b:", ~b)
+print("Logical LEFT SHIFT on a by 2:", a << 2)
+print("Logical LEFT SHIFT on b by 2:", b << 2)
+print("Logical RIGHT SHIFT on a by 2:", a >> 2)
+print("Logical RIGHT SHIFT on b by 2:", b >> 2)
+
+#-PROBLEM 12-
+import statistics as stat
+
+l = []
+for x in range(10):
+  l.append(int(input("Enter num: ")))
+
+m = stat.mean(l)
+print("Mean:", m)
+
+lessList = []
+equals = 0
+
+for n in l:
+  if(n < m):
+    lessList.append(n)
+  elif(n == m):
+    equals += 1
+
+print("There are", len(lessList), "elements less than the mean. They are:", lessList)
+print("There are", equals, "elements equal to the means.")
+print("There are", 10 - (len(lessList) + equals), "elements greater than the mean.")
