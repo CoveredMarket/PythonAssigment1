@@ -1,3 +1,8 @@
+#Solutions to Assignment 1 for Python Training
+#Author: Dylan Collins
+#Desc: A source repitoire of all problems given in assignment 1. Should be able to run the enitre file without error so long as approproate 
+#number of command line arguments are given for problem 5. Otherwise, each problem is labled. 
+
 #-PROBLEM 1-
 import random as r
 
