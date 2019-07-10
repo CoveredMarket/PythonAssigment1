@@ -48,6 +48,17 @@ def is_prime(n):
 x = r.randint(2, 101)
 print(is_prime(x))
 
+#-PROBLEM 5(a)
+import sys as s
+
+for x in range(1, 6):
+  print("Element", x, ":", s.argv[x])
+
+#-PROBLEM 5(b)
+import sys as s
+
+print(max(s.argv))
+
 #-PROBLEM 6-
 x = input("Enter a string: ")
 print(list(x),"\n")
@@ -408,3 +419,24 @@ while(num < 101):
       pass
         
 #-PROBLEM 20-
+#An iterative example as opposed to a recursive example.
+
+n1 = 0
+n2 = 1
+count = 0
+
+nterms = int(input("Enter the nth term: "))
+
+if nterms <= 0:
+   print("Error. Number is negative")
+elif nterms == 1:
+   print(nterms)
+   print(n1)
+else:
+   print(nterms)
+   while count < nterms:
+       print(n1, end=', ')
+       nth = n1 + n2
+       n1 = n2
+       n2 = nth
+       count += 1
