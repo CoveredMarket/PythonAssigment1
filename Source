@@ -169,3 +169,158 @@ for n in l:
 print("There are", len(lessList), "elements less than the mean. They are:", lessList)
 print("There are", equals, "elements equal to the means.")
 print("There are", 10 - (len(lessList) + equals), "elements greater than the mean.")
+
+#-PROBLEM 13-
+l = []
+
+for x in range(4):
+  l.append(int(input("Enter Num:")))
+
+leftBig = 0
+rightBig = 0
+biggest = 0
+
+if(l[0] > l[1]):
+  leftBig = l[0]
+else:
+  leftBig = l[1]
+
+if(l[2] > l[3]):
+  rightBig = l[2]
+  if(rightBig > leftBig):
+    biggest = rightBig
+  else:
+    biggest = leftBig
+else:
+  rightBig = l[3]
+  if(rightBig > leftBig):
+    biggest = rightBig
+  else:
+    biggest = leftBig
+
+print("Biggest of four:", biggest)
+
+l.append(int(input("Enter another num: ")))
+center = l[2]
+
+if(l[0] > l[1]):
+  leftBig = l[0]
+  if(l[3] > l[4]):
+    rightBig = l[3]
+    if(leftBig > rightBig):
+      if(leftBig > center):
+        biggest = leftBig
+      else:
+        biggest = center
+    else:
+      if(rightBig > center):
+        biggest = rightBig
+      else:
+        biggest = center
+  else:
+    rightBig = l[4]
+    if(leftBig > rightBig):
+      if(leftBig > center):
+        biggest = leftBig
+      else:
+        biggest = center
+    else:
+      if(rightBig > center):
+        biggest = rightBig
+      else:
+        biggest = center
+else:
+  leftBig = l[1]
+  if(l[3] > l[4]):
+    rightBig = l[3]
+    if(leftBig > rightBig):
+      if(leftBig > center):
+        biggest = leftBig
+      else:
+        biggest = center
+    else:
+      if(rightBig > center):
+        biggest = rightBig
+      else:
+        biggest = center
+  else:
+    rightBig = l[4]
+    if(leftBig > rightBig):
+      if(leftBig > center):
+        biggest = leftBig
+      else:
+        biggest = center
+    else:
+      if(rightBig > center):
+        biggest = rightBig
+      else:
+        biggest = center
+
+print("Biggest of 5:",biggest)
+
+#-PROBLEM 14-
+ids = [1,2,3,4,5,6,7,8,9,10]
+names = ["Bob", "John", "Tim", "Leon", "Ludwig", "Chris", "Larry", "Ryuji", "Doug", "Peter"]
+
+for x in names:
+  print(x)
+
+i = int(input("Enter Index:"))
+print(names[i], "->", ids[i])
+
+print("\n")
+
+for n in range(3,9):
+  print(names[n])
+
+print("\n")
+
+for n in range(2, len(names)):
+  print(names[n])
+
+n = int(input("Enter n:"))
+
+for i in names:
+  for i2 in range(n):
+    print(i)
+
+for i in ids:
+  for i2 in range(n):
+    print(i)
+
+print(names + ids)
+
+for i in range(10):
+  print(names[i], "->", ids[i])
+  
+#-PROBLEM 15-
+l = ["Bob", "John", "Ryuji", "Leon", "Tim"]
+print("Bob" in l) #True
+print("Danny" in l) #False
+
+inList = False
+n = input("Enter name to search: ")
+
+for x in l:
+  if(x == n):
+    inList = True
+
+print("In List:", inList)
+
+for x in range(0, 5):
+  print(l[(len(l) - 1) - x])
+  
+#-PROBLEM 16-
+from math import sqrt; from itertools import count, islice
+
+n = int(input("Enter num: "))
+
+print("Prime:", n > 1 and all(n%i for i in islice(count(2), int(sqrt(n)-1))))
+
+n = int(input("Enter nax num: "))
+
+for x in range(2, n):
+  if(x > 1 and all(x%i for i in islice(count(2), int(sqrt(x)-1))) == True):
+    print(x)
+    
+#-PROBLEM 17-
